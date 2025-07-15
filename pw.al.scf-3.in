@@ -1,0 +1,37 @@
+ &CONTROL
+    prefix = 'al'
+
+    ! outdir = 'temporary directory for large files'
+    pseudo_dir = './pseudo',
+ /
+
+ &SYSTEM    
+    ibrav = 4 ,
+    celldm(1) = 5.39698,
+    celldm(3) = 14
+    nat =  5,
+    ntyp = 1,
+    ecutwfc = 29.4, 
+
+    occupations = 'smearing',
+    smearing = 'methfessel-paxton',
+    degauss = 0.014
+ /
+
+ &ELECTRONS
+ /
+
+ATOMIC_SPECIES
+   Al  26.98 Al.pbe-n-kjpaw_psl.1.0.0.UPF
+   
+ATOMIC_POSITIONS alat
+   Al    0.000000   0.577351   8.437190
+   Al    0.500001   0.288676   7.620692
+   Al    0.000000   0.000000   6.804194  0 0 0
+   Al    0.000000   0.577351   5.987696  0 0 0
+   Al    0.500001   0.288676   5.171198  0 0 0
+
+
+
+K_POINTS automatic
+   12 12 12 1 1 1
